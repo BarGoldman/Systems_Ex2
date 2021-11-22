@@ -1,50 +1,38 @@
-#include "stdio.h"
+#include <stdio.h>
 #include "my_mat.h"
-/*
-void main()
+#define N 10
+
+int main()
 {
-    int i ,j ;
-    int arr[10][10]; 
-    for(int i = 0 ; i < 10 ; i++)
+  char a ; 
+  int mat[N][N];
+  while (1)
+  {
+        scanf ("%c", &a);
+        if(a == 'A')
         {
-            for(int j = i ; j < 10 ; j++)
-            {
-                printf("Enter value for disp[%d][%d]:", i, j);
-                scanf("%d", &arr[i][j]);
-            }
+            A(mat,N); 
+            scanf ("%c", &a);
         }
-        
-    
-    
-} 
-*/
-void main() {
- int i , j;
- 
- for(i=0; i < 20 ; i++) {
-  putchar('$');
-  for(j=0; j<10; j++) 
-   putchar('#');
-  printf("*\n");
-  
- } 
- 
- 
- 
- i=0;
- while( i < 20  ) {
-  putchar('$');
-  j=0;
-  while( j<10 ) {
-   putchar('#');
-   j++;
+        if(a == 'B')
+        {
+            int i,j;
+            scanf ("%d", &i);
+            scanf ("%d", &j);
+            B(mat,i,j);
+            scanf ("%c", &a);
+        }
+        if(a == 'C')
+        {
+            int i,j;
+            scanf ("%d", &i);
+            scanf ("%d", &j);
+            C(mat,i,j);
+            scanf ("%c", &a);
+        }
+        if(a == 'D'){
+           break;
+        }
   }
-  printf("*\n");
-  i++;  
- }
- 
- 
- } 
- 
 }
 
